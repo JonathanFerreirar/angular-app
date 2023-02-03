@@ -13,18 +13,27 @@
 
     <div class="row">
       <div class="col">
-        <h6>Translate the phrase:</h6>
-        <p>O que esta fazendo?</p>
+        <h6>{{ instrucao }}</h6>
+        <p>{{ rodadaFrase.fraseEng }}</p>
 
         <div class="form-group">
-          <textarea class="form-control" rows="3"></textarea>
+          <textarea
+            class="form-control"
+            rows="3"
+            (input)="atualizarResposta($event)"
+          ></textarea>
         </div>
 
         <div
           class="d-flex align-items-end flex-column mb-3"
           style="height: 150px"
         >
-          <button class="btn btn-primary mt-auto p-2">Check answer</button>
+          <button
+            class="btn btn-primary mt-auto p-2"
+            (click)="verificarResposta()"
+          >
+            Check answer
+          </button>
           <!-- <textarea class="form-text" rows="7" cols="50"></textarea> -->
         </div>
       </div>
