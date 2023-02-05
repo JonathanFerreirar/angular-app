@@ -7,4 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressoComponent implements OnInit {
   ngOnInit(): void {}
+
+  public progressoNumber: number = 50;
+
+  public progresso: string = `width: ${this.progressoNumber}%`;
 }
