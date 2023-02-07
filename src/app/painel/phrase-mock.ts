@@ -5,7 +5,7 @@ export const Phrases: Phrase[] = [
   { fraseEng: 'May i can help you ?', frasePtBr: 'POSSO AJUDAR' },
   { fraseEng: 'I eat bread?', frasePtBr: 'EU COMO PAO' },
   {
-    fraseEng: 'This phrase is hardest, try translate if you can',
+    fraseEng: 'This phrase is hardest try translate if you can',
     frasePtBr: 'ESSA FRASE E MAIS DIFICIL TENTE TRADUZIR SE PUDER',
   },
 ];
