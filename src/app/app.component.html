@@ -3,11 +3,35 @@
   <app-painel (encerrarJogo)="encerrarJogo($event)"></app-painel>
 </div>
 <ng-template #fimDeJogo>
-  <div class="container" style="margin-top: 100px; margin-left: 200px">
+  <div
+    *ngIf="tipoEncerramento === 'Derrota'; else fimDeJogoVitoria"
+    class="container"
+    style="margin-top: 100px; margin-left: 200px"
+  >
     <div class="row">
       <div class="col">
         <h3 style="color: red">Gamer over</h3>
       </div>
+      <button
+        type="button"
+        class="btn btn-danger btn-sm"
+        (click)="reiniciarJogo()"
+      >
+        Restart
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #fimDeJogoVitoria>
+  <div class="container" style="margin-top: 100px; margin-left: 200px">
+    <div class="row">
+      <div class="col">
+        <h3 style="color: green">You win</h3>
+      </div>
+      <button type="button" class="btn btn-success" (click)="reiniciarJogo()">
+        Restart
+      </button>
     </div>
   </div>
 </ng-template>

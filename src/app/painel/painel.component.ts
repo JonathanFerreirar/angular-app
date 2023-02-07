@@ -36,7 +36,6 @@ export class PainelComponent implements OnInit, OnDestroy {
 
   public verificarResposta(): void {
     if (this.rodadaFrase.frasePtBr == this.resposta.toUpperCase()) {
-      alert('Work');
       this.rodada++;
       this.progresso = this.progresso + 100 / this.phrases.length;
       if (this.rodada === 4) {
